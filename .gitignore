@@ -24,5 +24,4 @@ license.txt
 readme.html
 sitemap.xml
 
-
 .github/workflows/heroku-deploy.yml
