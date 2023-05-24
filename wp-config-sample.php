@@ -94,3 +94,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
+
+
+
+$db = parse_url(getenv('JAWSDB_URL'));
+define('DB_NAME', trim($db['path'], '/'));
+define('DB_USER', $db['user']);
+define('DB_PASSWORD', $db['pass']);
+define('DB_HOST', $db['host']);
+
+define('DB_CHARSET', 'utf8');
+define('DB_COLLATE', '');
