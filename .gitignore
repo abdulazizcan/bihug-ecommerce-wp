@@ -7,9 +7,8 @@ wp-config.php
 wp-config-sample.php
 
 # WordPress Content
-wp-content/plugins/
-wp-content/themes/
-wp-content/uploads/
+wp-content
+
 
 # WordPress Cache
 wp-content/cache/
