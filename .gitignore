@@ -9,7 +9,7 @@ wp-config-sample.php
 # WordPress Content
 wp-content
 
-
+wp-content/plugins
 # WordPress Cache
 wp-content/cache/
 
