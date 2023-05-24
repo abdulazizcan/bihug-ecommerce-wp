@@ -20,22 +20,31 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'database_name_here' );
+// define( 'DB_NAME', 'database_name_here' );
 
-/** Database username */
-define( 'DB_USER', 'username_here' );
+// /** Database username */
+// define( 'DB_USER', 'username_here' );
 
-/** Database password */
-define( 'DB_PASSWORD', 'password_here' );
+// /** Database password */
+// define( 'DB_PASSWORD', 'password_here' );
 
-/** Database hostname */
-define( 'DB_HOST', 'localhost' );
+// /** Database hostname */
+// define( 'DB_HOST', 'localhost' );
 
-/** Database charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8' );
+// /** Database charset to use in creating database tables. */
+// define( 'DB_CHARSET', 'utf8' );
 
-/** The database collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', '' );
+// /** The database collate type. Don't change this if in doubt. */
+// define( 'DB_COLLATE', '' );
+
+$db = parse_url(getenv('CLEARDB_DATABASE_URL'));
+define('DB_NAME', trim($db['path'], '/'));
+define('DB_USER', $db['user']);
+define('DB_PASSWORD', $db['pass']);
+define('DB_HOST', $db['host']);
+
+define('DB_CHARSET', 'utf8');
+define('DB_COLLATE', '');
 
 /**#@+
  * Authentication unique keys and salts.
